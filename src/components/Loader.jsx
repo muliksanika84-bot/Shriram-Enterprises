@@ -8,7 +8,7 @@ function Loader() {
 
         <h1>🌿</h1>
 
-        <h2>Shriram Enterprise</h2>
+        <h2>Shriram Masales</h2>
 
         <p>Premium Turmeric Powder</p>
 

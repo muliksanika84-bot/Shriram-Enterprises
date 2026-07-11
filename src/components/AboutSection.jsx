@@ -1,59 +1,38 @@
 import "./AboutSection.css";
-import turmeric100 from "../assets/images/turmeric100g.jpeg";
 import { FaLeaf, FaAward, FaSeedling } from "react-icons/fa";
 
 function AboutSection() {
   return (
     <section className="about" id="about">
 
-      <div className="about-image">
-        <img
-          src={turmeric100}
-          alt="Premium Turmeric Powder"
-        />
-      </div>
-
       <div className="about-content">
 
-        <span className="section-tag">
-          ABOUT SHRIRAM ENTERPRISES
-        </span>
+        <span className="section-tag">ABOUT US</span>
 
-        <h2>
-          Naturally Pure. Trusted Quality.
-        </h2>
+        <h2>About Shriram Masales</h2>
 
         <p>
-          Shriram Enterprises is committed to delivering premium-quality
-          turmeric powder made from carefully selected turmeric sourced
-          directly from farms. Every pack is hygienically processed to
-          preserve its natural colour, aroma and freshness.
+          Shriram Masales is committed to delivering premium quality spices made
+          from carefully selected ingredients. Every product is hygienically
+          processed and packed to preserve its natural aroma, freshness, and
+          authentic taste.
         </p>
 
         <div className="about-features">
 
-          <div className="feature-box">
+          <div>
             <FaLeaf />
-            <div>
-              <h4>100% Natural</h4>
-              <p>No artificial colours or preservatives.</p>
-            </div>
+            <span>100% Natural Ingredients</span>
           </div>
 
-          <div className="feature-box">
+          <div>
             <FaAward />
-            <div>
-              <h4>Premium Quality</h4>
-              <p>Rich aroma and authentic taste.</p>
-            </div>
+            <span>Premium Quality Products</span>
           </div>
 
-          <div className="feature-box">
+          <div>
             <FaSeedling />
-            <div>
-              <h4>Farm Fresh</h4>
-              <p>Prepared with care to maintain purity.</p>
-            </div>
+            <span>Freshly Processed & Packed</span>
           </div>
 
         </div>

@@ -19,7 +19,7 @@ const faqData = [
       "Yes. We supply retailers, wholesalers and distributors. Please contact us for bulk enquiries.",
   },
   {
-    question: "How can I contact Shriram Enterprises?",
+    question: "How can I contact Shriram Masales?",
     answer:
       "You can reach us through WhatsApp, Instagram or our Contact section.",
   },

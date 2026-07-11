@@ -2,18 +2,12 @@ import "./WhatsAppButton.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 function WhatsAppButton() {
-
-  const phoneNumber = "919890070845"; // Replace with your number
-
-  const message =
-    "Hello Shriram Enterprises, I would like to know more about your turmeric powder.";
-
   return (
     <a
-      href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-      className="whatsapp-btn"
+      href="https://wa.me/919890070845?text=Hello%20Shriram%20Masales,%20I%20would%20like%20to%20know%20more%20about%20your%20products."
+      className="whatsapp-button"
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noreferrer"
     >
       <FaWhatsapp />
     </a>

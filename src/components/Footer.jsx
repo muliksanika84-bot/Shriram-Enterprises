@@ -1,10 +1,11 @@
 import "./Footer.css";
+import logo from "../assets/logo/logo.jpeg";
 import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaInstagram,
   FaWhatsapp,
+  FaInstagram,
 } from "react-icons/fa";
 
 function Footer() {
@@ -13,15 +14,55 @@ function Footer() {
 
       <div className="footer-container">
 
-        {/* Company */}
-
         <div className="footer-box">
-          <h2>Shriram Enterprise</h2>
+
+          <img src={logo} alt="Shriram Masales Logo" className="footer-logo" />
+
+          <h2>Shriram Masales</h2>
 
           <p>
-            Premium Quality Turmeric Powder made with purity,
-            freshness and authentic taste.
+            Delivering premium quality turmeric powder and authentic spices
+            with purity, freshness and traditional taste.
           </p>
+
+        </div>
+
+        <div className="footer-box">
+
+          <h3>Quick Links</h3>
+
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+
+        </div>
+
+        <div className="footer-box">
+
+          <h3>Contact</h3>
+
+          <p>
+            <FaPhoneAlt /> +91 9890070845
+          </p>
+
+          <p>
+            <FaPhoneAlt /> +91 8308288352
+          </p>
+
+          <p>
+            <FaEnvelope /> shriramenterprises1512@gmail.com
+          </p>
+
+          <p>
+            <FaMapMarkerAlt /> Karad, Maharashtra
+          </p>
+
+        </div>
+
+        <div className="footer-box">
+
+          <h3>Connect With Us</h3>
 
           <div className="footer-social">
 
@@ -34,7 +75,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://www.instagram.com/shriram.ent_official"
+              href="https://www.instagram.com/shriram.ent_official?igsh=M3dsaHk3YW5kYzRk"
               target="_blank"
               rel="noreferrer"
             >
@@ -42,59 +83,13 @@ function Footer() {
             </a>
 
           </div>
-        </div>
-
-        {/* Quick Links */}
-
-        <div className="footer-box">
-
-          <h3>Quick Links</h3>
-
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#products">Products</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-
-        </div>
-
-        {/* Contact */}
-
-        <div className="footer-box">
-
-          <h3>Contact</h3>
-
-          <p>
-            <FaPhoneAlt /> +91 9890070845
-          </p>
-
-          <p>
-            <FaEnvelope /> shriramenterprises1512@gmail.com
-          </p>
-
-          <p>
-            <FaMapMarkerAlt /> Karad, Maharashtra
-          </p>
-
-          <p>
-            Mon - Sat | 9:00 AM - 7:00 PM
-          </p>
 
         </div>
 
       </div>
 
       <div className="footer-bottom">
-
-        <p>
-          © 2026 Shriram Enterprise. All Rights Reserved.
-        </p>
-
-        <p>
-          Made with ❤️ in Maharashtra
-        </p>
-
+        © {new Date().getFullYear()} Shriram Masales. All Rights Reserved.
       </div>
 
     </footer>

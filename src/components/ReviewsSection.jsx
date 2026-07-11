@@ -1,73 +1,37 @@
 import "./ReviewsSection.css";
-import { FaStar } from "react-icons/fa";
 
 function ReviewsSection() {
   return (
-    <section className="reviews" id="reviews">
+    <section className="reviews">
 
-      <div className="section-title">
-        <span>CUSTOMER REVIEWS</span>
-        <h2>What Our Customers Say</h2>
-        <p>
-          We believe quality products create happy customers.
-        </p>
-      </div>
+      <span className="section-tag">CUSTOMER REVIEWS</span>
+
+      <h2>What Our Customers Say</h2>
 
       <div className="reviews-grid">
 
         <div className="review-card">
-
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-
+          ⭐⭐⭐⭐⭐
           <p>
-            "Excellent quality turmeric with rich colour and aroma.
-            Highly recommended."
+            Excellent quality spices with authentic taste. Highly recommended.
           </p>
-
           <h4>- Happy Customer</h4>
-
         </div>
 
         <div className="review-card">
-
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-
+          ⭐⭐⭐⭐⭐
           <p>
-            "Packaging was excellent and the turmeric feels fresh and pure."
+            Fresh products, good packaging and timely delivery.
           </p>
-
-          <h4>- Regular Buyer</h4>
-
+          <h4>- Wholesale Buyer</h4>
         </div>
 
         <div className="review-card">
-
-          <div className="stars">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </div>
-
+          ⭐⭐⭐⭐⭐
           <p>
-            "Very good quality. Looking forward to ordering again."
+            One of the best quality turmeric powder and masalas we have used.
           </p>
-
-          <h4>- Retail Customer</h4>
-
+          <h4>- Regular Customer</h4>
         </div>
 
       </div>

@@ -1,32 +1,27 @@
 import "./Stats.css";
-import { FaUsers, FaLeaf, FaBoxOpen, FaAward } from "react-icons/fa";
 
 function Stats() {
   return (
     <section className="stats">
 
-      <div className="stat-card">
-        <FaLeaf />
+      <div className="stat-box">
         <h2>100%</h2>
-        <p>Natural Turmeric</p>
+        <p>Natural Products</p>
       </div>
 
-      <div className="stat-card">
-        <FaAward />
-        <h2>Premium</h2>
-        <p>Quality Assured</p>
+      <div className="stat-box">
+        <h2>500+</h2>
+        <p>Happy Customers</p>
       </div>
 
-      <div className="stat-card">
-        <FaBoxOpen />
-        <h2>2</h2>
-        <p>Pack Sizes Available</p>
-      </div>
-
-      <div className="stat-card">
-        <FaUsers />
-        <h2>Bulk</h2>
+      <div className="stat-box">
+        <h2>50+</h2>
         <p>Wholesale Orders</p>
+      </div>
+
+      <div className="stat-box">
+        <h2>24×7</h2>
+        <p>Customer Support</p>
       </div>
 
     </section>

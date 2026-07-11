@@ -1,54 +1,43 @@
 import "./WhyChoose.css";
-import { FaLeaf, FaAward, FaTruck, FaShieldAlt } from "react-icons/fa";
+import {
+  FaLeaf,
+  FaAward,
+  FaTruck,
+  FaHandsHelping,
+} from "react-icons/fa";
 
 function WhyChoose() {
   return (
     <section className="why-choose">
 
-      <div className="section-heading">
-        <span>WHY CHOOSE US</span>
+      <span className="section-tag">WHY CHOOSE US</span>
 
-        <h2>Quality You Can Trust</h2>
-
-        <p>
-          We deliver naturally farm-sourced turmeric powder that is
-          hygienically processed, carefully packed and made to retain its
-          natural colour, aroma and freshness.
-        </p>
-      </div>
+      <h2>Why Choose Shriram Masales?</h2>
 
       <div className="why-grid">
 
         <div className="why-card">
           <FaLeaf />
-          <h3>100% Natural</h3>
-          <p>
-            Pure turmeric powder without artificial colours or chemicals.
-          </p>
+          <h3>Pure & Natural</h3>
+          <p>Prepared using carefully selected quality spices.</p>
         </div>
 
         <div className="why-card">
           <FaAward />
           <h3>Premium Quality</h3>
-          <p>
-            Carefully selected turmeric with rich aroma and authentic taste.
-          </p>
-        </div>
-
-        <div className="why-card">
-          <FaShieldAlt />
-          <h3>Hygienic Packing</h3>
-          <p>
-            Processed and packed under clean conditions to maintain freshness.
-          </p>
+          <p>Maintaining the highest quality standards.</p>
         </div>
 
         <div className="why-card">
           <FaTruck />
-          <h3>Bulk Orders</h3>
-          <p>
-            We supply retailers, wholesalers and distributors across India.
-          </p>
+          <h3>Fast Delivery</h3>
+          <p>Quick supply for retail and wholesale customers.</p>
+        </div>
+
+        <div className="why-card">
+          <FaHandsHelping />
+          <h3>Customer Support</h3>
+          <p>Dedicated support for every customer.</p>
         </div>
 
       </div>

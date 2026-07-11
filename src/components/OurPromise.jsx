@@ -1,64 +1,39 @@
 import "./OurPromise.css";
-import { FaAward, FaLeaf, FaHandshake, FaWhatsapp } from "react-icons/fa";
+import { FaLeaf, FaAward, FaTruck, FaHandsHelping } from "react-icons/fa";
 
 function OurPromise() {
   return (
-    <section className="promise">
+    <section className="our-promise">
+
+      <span className="section-tag">OUR PROMISE</span>
+
+      <h2>Why Customers Trust Shriram Masales</h2>
 
       <div className="promise-container">
 
-        <span className="promise-tag">
-          OUR PROMISE
-        </span>
-
-        <h2>
-          Quality You Can Trust,
-          <span> Every Single Time.</span>
-        </h2>
-
-        <p className="promise-text">
-          At <strong>Shriram Enterprise</strong>, we believe that every home
-          deserves pure, fresh and naturally processed turmeric powder.
-          Our commitment is to deliver products that maintain their rich
-          colour, authentic aroma and premium quality.
-        </p>
-
-        <div className="promise-cards">
-
-          <div className="promise-card">
-            <FaLeaf />
-            <h3>100% Pure</h3>
-            <p>No artificial colours or harmful chemicals.</p>
-          </div>
-
-          <div className="promise-card">
-            <FaAward />
-            <h3>Premium Quality</h3>
-            <p>Carefully selected and hygienically packed.</p>
-          </div>
-
-          <div className="promise-card">
-            <FaHandshake />
-            <h3>Customer First</h3>
-            <p>Your satisfaction and trust are our biggest priorities.</p>
-          </div>
-
+        <div className="promise-card">
+          <FaLeaf />
+          <h3>100% Natural</h3>
+          <p>Made from carefully selected premium quality spices.</p>
         </div>
 
-        <blockquote>
-          "Every packet we deliver carries our promise of purity,
-          freshness and trust."
-        </blockquote>
+        <div className="promise-card">
+          <FaAward />
+          <h3>Premium Quality</h3>
+          <p>Every product is hygienically processed and packed.</p>
+        </div>
 
-        <a
-          href="https://wa.me/919890070845"
-          target="_blank"
-          rel="noreferrer"
-          className="promise-btn"
-        >
-          <FaWhatsapp />
-          Order on WhatsApp
-        </a>
+        <div className="promise-card">
+          <FaTruck />
+          <h3>Fast Delivery</h3>
+          <p>Timely delivery for retail and wholesale customers.</p>
+        </div>
+
+        <div className="promise-card">
+          <FaHandsHelping />
+          <h3>Customer Satisfaction</h3>
+          <p>Your trust and satisfaction are our highest priorities.</p>
+        </div>
 
       </div>
 

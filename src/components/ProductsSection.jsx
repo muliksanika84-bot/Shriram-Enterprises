@@ -4,91 +4,81 @@ import turmeric50 from "../assets/images/turmeric50g.jpeg";
 import turmeric100 from "../assets/images/turmeric100g.jpeg";
 
 function ProductsSection() {
-
-  const whatsappLink = (product) => {
-    const phone = "919890070845"; // Replace with your WhatsApp number
-
-    const message = `Hello Shriram Enterprises, I am interested in your ${product}. Please share more details.`;
-
-    window.open(
-      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
-
   return (
     <section className="products" id="products">
 
-      <div className="section-title">
-        <span>OUR PRODUCTS</span>
+      <span className="section-tag">
+        OUR PRODUCTS
+      </span>
 
-        <h2>Premium Turmeric Powder</h2>
+      <h2>Our Best Selling Products</h2>
 
-        <p>
-          Carefully processed and hygienically packed to preserve
-          freshness, colour and natural aroma.
-        </p>
-      </div>
+      <p className="products-subtitle">
+        Premium quality turmeric powder made from carefully selected turmeric
+        for rich colour, aroma and authentic taste.
+      </p>
 
-      <div className="product-container">
-
-        {/* Product 1 */}
+      <div className="products-grid">
 
         <div className="product-card">
 
-          <span className="product-badge">
-            Popular
-          </span>
+          <div className="product-badge">
+            Best Seller
+          </div>
 
           <img
             src={turmeric50}
-            alt="50g Turmeric Powder"
+            alt="Turmeric Powder 50g"
           />
 
           <h3>Turmeric Powder</h3>
 
-          <h4>50g Pack</h4>
+          <p>50 Gram Pack</p>
 
-          <p>
-            Perfect for everyday cooking with rich colour,
-            aroma and authentic taste.
-          </p>
+          <h4>₹35</h4>
 
-          <button
-            onClick={() => whatsappLink("50g Turmeric Powder")}
+          <span className="stock">
+            ✔ In Stock
+          </span>
+
+          <a
+            href="https://wa.me/919890070845?text=Hello%20Shriram%20Masales,%20I%20want%20to%20order%20the%2050g%20Turmeric%20Powder."
+            target="_blank"
+            rel="noreferrer"
           >
-            Enquire Now
-          </button>
+            Order Now
+          </a>
 
         </div>
 
-        {/* Product 2 */}
-
         <div className="product-card">
 
-          <span className="product-badge">
+          <div className="product-badge">
             Best Seller
-          </span>
+          </div>
 
           <img
             src={turmeric100}
-            alt="100g Turmeric Powder"
+            alt="Turmeric Powder 100g"
           />
 
           <h3>Turmeric Powder</h3>
 
-          <h4>100g Pack</h4>
+          <p>100 Gram Pack</p>
 
-          <p>
-            Ideal for families and regular use.
-            Premium quality turmeric sourced directly from farms.
-          </p>
+          <h4>₹55</h4>
 
-          <button
-            onClick={() => whatsappLink("100g Turmeric Powder")}
+          <span className="stock">
+            ✔ In Stock
+          </span>
+
+          <a
+            href="https://wa.me/919890070845?text=Hello%20Shriram%20Masales,%20I%20want%20to%20order%20the%20100g%20Turmeric%20Powder."
+            target="_blank"
+            rel="noreferrer"
           >
-            Enquire Now
-          </button>
+            Order Now
+          </a>
 
         </div>
 
