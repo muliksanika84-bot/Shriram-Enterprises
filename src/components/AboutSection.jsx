@@ -1,5 +1,10 @@
 import "./AboutSection.css";
-import { FaLeaf, FaAward, FaSeedling } from "react-icons/fa";
+import {
+  FaLeaf,
+  FaAward,
+  FaSeedling,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 function AboutSection() {
   return (
@@ -7,32 +12,70 @@ function AboutSection() {
 
       <div className="about-content">
 
-        <span className="section-tag">ABOUT US</span>
+        <span className="section-tag">
+          ABOUT US
+        </span>
 
-        <h2>About Shriram Masales</h2>
+        <h2>
+          Welcome to <span>Shriram Masales</span>
+        </h2>
 
         <p>
-          Shriram Masales is committed to delivering premium quality spices made
-          from carefully selected ingredients. Every product is hygienically
-          processed and packed to preserve its natural aroma, freshness, and
-          authentic taste.
+          At <strong>Shriram Masales</strong>, we are committed to delivering
+          premium quality turmeric powder and authentic spices made from
+          carefully selected ingredients. Every product is hygienically
+          processed and packed to preserve its natural aroma, freshness and
+          rich taste.
         </p>
 
         <div className="about-features">
 
-          <div>
+          <div className="feature-box">
             <FaLeaf />
-            <span>100% Natural Ingredients</span>
+
+            <div>
+              <h4>100% Natural</h4>
+
+              <p>
+                No artificial colours or preservatives.
+              </p>
+            </div>
           </div>
 
-          <div>
+          <div className="feature-box">
             <FaAward />
-            <span>Premium Quality Products</span>
+
+            <div>
+              <h4>Premium Quality</h4>
+
+              <p>
+                Carefully selected turmeric with rich colour and aroma.
+              </p>
+            </div>
           </div>
 
-          <div>
+          <div className="feature-box">
             <FaSeedling />
-            <span>Freshly Processed & Packed</span>
+
+            <div>
+              <h4>Freshly Packed</h4>
+
+              <p>
+                Hygienically packed to maintain freshness.
+              </p>
+            </div>
+          </div>
+
+          <div className="feature-box">
+            <FaCheckCircle />
+
+            <div>
+              <h4>Trusted by Customers</h4>
+
+              <p>
+                Affordable pricing with guaranteed quality.
+              </p>
+            </div>
           </div>
 
         </div>

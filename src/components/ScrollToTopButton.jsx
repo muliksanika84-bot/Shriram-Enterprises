@@ -3,20 +3,16 @@ import { FaArrowUp } from "react-icons/fa";
 import "./ScrollToTopButton.css";
 
 function ScrollToTopButton() {
-  const [visible, setVisible] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 350);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
@@ -27,11 +23,13 @@ function ScrollToTopButton() {
   };
 
   return (
-    visible && (
-      <button className="scroll-top-btn" onClick={scrollToTop}>
-        <FaArrowUp />
-      </button>
-    )
+    <button
+      className={`scroll-top-btn ${showButton ? "show" : ""}`}
+      onClick={scrollToTop}
+      aria-label="Back to Top"
+    >
+      <FaArrowUp />
+    </button>
   );
 }
 

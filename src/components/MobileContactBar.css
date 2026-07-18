@@ -1,38 +1,76 @@
-.mobile-bar{
+.mobile-contact-bar{
 display:none;
 position:fixed;
-bottom:0;
 left:0;
+bottom:0;
 width:100%;
-z-index:999;
-box-shadow:0 -5px 20px rgba(0,0,0,.15);
+height:65px;
+background:#ffffff;
+box-shadow:0 -8px 25px rgba(0,0,0,.12);
+z-index:9999;
+border-top:1px solid rgba(0,0,0,.08);
 }
 
-.mobile-bar a{
+.mobile-contact-bar a{
 flex:1;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-gap:8px;
-padding:15px;
+gap:5px;
 text-decoration:none;
+color:#444;
+font-size:13px;
 font-weight:600;
-color:white;
-font-size:16px;
+transition:.3s;
 }
 
-.mobile-bar a:first-child{
-background:#444;
+.mobile-contact-bar a svg{
+font-size:22px;
+transition:.3s;
 }
 
-.mobile-bar a:last-child{
-background:#25D366;
+.mobile-contact-bar a:hover{
+background:#f8f8f8;
+color:#d89b00;
+}
+
+.mobile-contact-bar a:hover svg{
+transform:scale(1.15);
+}
+
+.mobile-contact-bar .whatsapp-link{
+color:#25D366;
+}
+
+.mobile-contact-bar .whatsapp-link svg{
+font-size:24px;
 }
 
 @media(max-width:768px){
 
-.mobile-bar{
+.mobile-contact-bar{
 display:flex;
+}
+
+}
+
+@media(max-width:480px){
+
+.mobile-contact-bar{
+height:60px;
+}
+
+.mobile-contact-bar a{
+font-size:11px;
+}
+
+.mobile-contact-bar a svg{
+font-size:20px;
+}
+
+.mobile-contact-bar .whatsapp-link svg{
+font-size:22px;
 }
 
 }

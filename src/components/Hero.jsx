@@ -14,7 +14,7 @@ function Hero() {
         </span>
 
         <h1>
-          Premium <span>Masalas</span>
+          Premium <span>Masales</span>
         </h1>
 
         <p>

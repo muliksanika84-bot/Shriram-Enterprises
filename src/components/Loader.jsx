@@ -1,18 +1,27 @@
 import "./Loader.css";
+import logo from "../assets/logo/logo.jpeg";
 
 function Loader() {
   return (
     <div className="loader">
 
-      <div className="loader-content">
+      <div className="loader-card">
 
-        <h1>🌿</h1>
+        <img
+          src={logo}
+          alt="Shriram Masales"
+          className="loader-logo"
+        />
 
-        <h2>Shriram Masales</h2>
+        <h1>Shriram Masales</h1>
 
-        <p>Premium Turmeric Powder</p>
+        <p>Premium Quality Turmeric Powder</p>
 
-        <div className="spinner"></div>
+        <div className="loader-spinner">
+          <span></span>
+        </div>
+
+        <small>Loading...</small>
 
       </div>
 

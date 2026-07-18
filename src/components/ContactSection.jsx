@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
 import "./ContactSection.css";
 
 import {
@@ -8,12 +7,35 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaInstagram,
+  FaWhatsapp,
   FaPaperPlane,
+  FaClock,
 } from "react-icons/fa";
 
 function ContactSection() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+
+  const handleEnquiryChange = (e) => {
+    const messages = {
+      product:
+        "Hello Shriram Masales,\n\nI would like to know more about your turmeric powder products.",
+
+      order:
+        "Hello Shriram Masales,\n\nI would like to place an order. Kindly contact me with the details.",
+
+      wholesale:
+        "Hello Shriram Masales,\n\nI am interested in wholesale purchasing. Please share your price list and dealership details.",
+
+      dealership:
+        "Hello Shriram Masales,\n\nI would like to know about your dealership opportunities.",
+
+      enquiry:
+        "Hello Shriram Masales,\n\nI have an enquiry regarding your products.",
+    };
+
+    form.current.message.value = messages[e.target.value] || "";
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -31,8 +53,7 @@ function ContactSection() {
         form.current.reset();
         setLoading(false);
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(() => {
         alert("❌ Failed to send message.");
         setLoading(false);
       });
@@ -40,66 +61,93 @@ function ContactSection() {
 
   return (
     <section className="contact" id="contact">
+
       <div className="contact-left">
-        <span className="section-tag">CONTACT US</span>
 
-        <h2>Contact Shriram Masales</h2>
+        <span className="section-tag">
+          CONTACT US
+        </span>
 
-        <p>
-          We'd love to hear from you. Contact us for premium spices,
-          wholesale orders, dealership enquiries or any other information.
+        <h2>Let's Connect</h2>
+
+        <p className="contact-text">
+          We are always happy to help you with product enquiries,
+          wholesale orders, dealership opportunities and customer support.
         </p>
 
         <div className="contact-info">
 
           <div className="info-box">
             <FaPhoneAlt />
-
             <div>
-              <a href="tel:+919890070845">
-                +91 9890070845
-              </a>
-
-              <br />
-
-              <a href="tel:+918308288352">
-                +91 8308288352
-              </a>
+              <h4>Call Us</h4>
+              <a href="tel:+919890070845">+91 9890070845</a>
+              <a href="tel:+918308288352">+91 8308288352</a>
             </div>
           </div>
 
           <div className="info-box">
             <FaEnvelope />
-
-            <a href="mailto:shriramenterprises1512@gmail.com">
-              shriramenterprises1512@gmail.com
-            </a>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:shriramenterprises1512@gmail.com">
+                shriramenterprises1512@gmail.com
+              </a>
+            </div>
           </div>
 
           <div className="info-box">
-            <FaMapMarkerAlt />
-
-            <span>Karad, Maharashtra, India</span>
+            <FaWhatsapp />
+            <div>
+              <h4>WhatsApp</h4>
+              <a
+                href="https://wa.me/919890070845"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Chat with us
+              </a>
+            </div>
           </div>
 
           <div className="info-box">
             <FaInstagram />
+            <div>
+              <h4>Instagram</h4>
+              <a
+                href="https://www.instagram.com/shriram.ent_official"
+                target="_blank"
+                rel="noreferrer"
+              >
+                @shriram.ent_official
+              </a>
+            </div>
+          </div>
 
-            <a
-              href="https://www.instagram.com/shriram.ent_official?igsh=M3dsaHk3YW5kYzRk"
-              target="_blank"
-              rel="noreferrer"
-            >
-              @shriram.ent_official
-            </a>
+          <div className="info-box">
+            <FaMapMarkerAlt />
+            <div>
+              <h4>Location</h4>
+              <span>Karad, Maharashtra, India</span>
+            </div>
+          </div>
+
+          <div className="info-box">
+            <FaClock />
+            <div>
+              <h4>Business Hours</h4>
+              <span>Monday - Saturday</span>
+              <span>10:00 AM - 7:00 PM</span>
+            </div>
           </div>
 
         </div>
+
       </div>
 
       <div className="contact-right">
 
-        <h3>Quick Enquiry</h3>
+        <h3>Send Us an Enquiry</h3>
 
         <form ref={form} onSubmit={sendEmail}>
 
@@ -120,16 +168,44 @@ function ContactSection() {
           <input
             type="tel"
             name="phone"
-            placeholder="Your Phone Number"
+            placeholder="Phone Number"
             required
           />
+
+          <select onChange={handleEnquiryChange}>
+
+            <option value="">
+              Select Enquiry Type
+            </option>
+
+            <option value="product">
+              Product Information
+            </option>
+
+            <option value="order">
+              Place an Order
+            </option>
+
+            <option value="wholesale">
+              Wholesale Enquiry
+            </option>
+
+            <option value="dealership">
+              Dealership Enquiry
+            </option>
+
+            <option value="enquiry">
+              General Enquiry
+            </option>
+
+          </select>
 
           <textarea
             name="message"
             rows="6"
-            placeholder="Your Message"
+            placeholder="Your message will appear here..."
             required
-          ></textarea>
+          />
 
           <button type="submit" disabled={loading}>
             <FaPaperPlane />
@@ -139,6 +215,7 @@ function ContactSection() {
         </form>
 
       </div>
+
     </section>
   );
 }
