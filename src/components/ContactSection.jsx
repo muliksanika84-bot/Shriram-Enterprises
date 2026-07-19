@@ -43,10 +43,10 @@ function ContactSection() {
 
     emailjs
       .sendForm(
-        "service_3zvbdjg",
-        "template_h4ghcri",
+        "service_qjztk4a",
+        "template_nbbzzf9",
         form.current,
-        "dt_G4LozytmcqNAeE"
+        "gw_hvEElnevc-RFY2"
       )
       .then(() => {
         alert("✅ Message Sent Successfully!");
@@ -149,70 +149,70 @@ function ContactSection() {
 
         <h3>Send Us an Enquiry</h3>
 
-        <form ref={form} onSubmit={sendEmail}>
+       <form ref={form} onSubmit={sendEmail}>
 
-          <input
-            type="text"
-            name="from_name"
-            placeholder="Your Name"
-            required
-          />
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+  />
 
-          <input
-            type="email"
-            name="from_email"
-            placeholder="Your Email"
-            required
-          />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+  />
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            required
-          />
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Your Phone Number"
+    required
+  />
 
-          <select onChange={handleEnquiryChange}>
+  <select
+    name="enquiry_type"
+    onChange={handleEnquiryChange}
+    required
+  >
+    <option value="">Select Enquiry Type</option>
 
-            <option value="">
-              Select Enquiry Type
-            </option>
+    <option value="product">
+      Product Information
+    </option>
 
-            <option value="product">
-              Product Information
-            </option>
+    <option value="order">
+      Place an Order
+    </option>
 
-            <option value="order">
-              Place an Order
-            </option>
+    <option value="wholesale">
+      Wholesale Order
+    </option>
 
-            <option value="wholesale">
-              Wholesale Enquiry
-            </option>
+    <option value="dealership">
+      Dealership
+    </option>
 
-            <option value="dealership">
-              Dealership Enquiry
-            </option>
+    <option value="enquiry">
+      General Enquiry
+    </option>
+  </select>
 
-            <option value="enquiry">
-              General Enquiry
-            </option>
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="Your Message"
+    required
+  ></textarea>
 
-          </select>
+  <button type="submit" disabled={loading}>
+    <FaPaperPlane />
+    {loading ? "Sending..." : "Send Enquiry"}
+  </button>
 
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Your message will appear here..."
-            required
-          />
-
-          <button type="submit" disabled={loading}>
-            <FaPaperPlane />
-            {loading ? "Sending..." : "Send Enquiry"}
-          </button>
-
-        </form>
+</form>
 
       </div>
 
