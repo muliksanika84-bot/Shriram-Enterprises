@@ -8,10 +8,12 @@ import ReviewsSection from "../components/ReviewsSection";
 import FAQSection from "../components/FAQSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import OfferBanner from "../components/OfferBanner";
 
 function Home() {
   return (
     <>
+      <OfferBanner />
       <Hero />
 
       <Stats />
