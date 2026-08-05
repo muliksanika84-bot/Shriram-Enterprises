@@ -1,11 +1,20 @@
 import "./Navbar.css";
 import logo from "../assets/logo/logo.jpeg";
-import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaShoppingCart,
+} from "react-icons/fa";
+
+import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
+  const { totalItems } = useCart();
+
   return (
     <header className="navbar">
-
       <div className="navbar-logo">
         <img src={logo} alt="Shriram Masales Logo" />
 
@@ -24,8 +33,19 @@ function Navbar() {
 
       <div className="navbar-right">
 
-        <div className="phone-box">
+        {/* Cart */}
 
+        <Link to="/cart" className="cart-icon">
+          <FaShoppingCart />
+
+          {totalItems > 0 && (
+            <span className="cart-count">
+              {totalItems}
+            </span>
+          )}
+        </Link>
+
+        <div className="phone-box">
           <a href="tel:+919890070845">
             <FaPhoneAlt />
             9890070845
@@ -35,7 +55,6 @@ function Navbar() {
             <FaPhoneAlt />
             8308288352
           </a>
-
         </div>
 
         <a
@@ -47,9 +66,7 @@ function Navbar() {
           <FaWhatsapp />
           WhatsApp
         </a>
-
       </div>
-
     </header>
   );
 }

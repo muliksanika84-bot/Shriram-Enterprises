@@ -69,7 +69,7 @@ function OfferBanner() {
             <h1>🌧️ Monsoon Mega Sale</h1>
 
             <h3>
-              📅 Starts From <span>6 August</span>
+              📅 Starts From <span>9 August</span>
             </h3>
 
             <p>
