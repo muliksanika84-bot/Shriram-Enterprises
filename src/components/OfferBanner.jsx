@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 function OfferBanner() {
-  const saleDate = new Date("August 6, 2026 00:00:00").getTime();
+  const saleDate = new Date("August 9, 2026 00:00:00").getTime();
 
   const calculateTime = () => {
     const now = new Date().getTime();
