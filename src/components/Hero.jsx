@@ -4,7 +4,7 @@ import heroImage from "../assets/images/hero-image.jpeg";
 
 function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero">
 
       <div className="hero-content">
 
@@ -18,9 +18,9 @@ function Hero() {
         </h1>
 
         <p>
-          Welcome to <strong>Shriram Masales</strong>. We provide premium quality
-          turmeric powder and authentic spices that are hygienically processed,
-          rich in aroma, and full of natural taste.
+          Welcome to <strong>Shriram Masales</strong>. We provide premium
+          quality turmeric powder and authentic spices that are hygienically
+          processed, rich in aroma, and full of natural taste.
         </p>
 
         <div className="hero-buttons">
@@ -51,11 +51,11 @@ function Hero() {
       </div>
 
       <div className="hero-image">
-  <img
-    src={heroImage}
-    alt="Shriram Masales Premium Products"
-  />
-</div>
+        <img
+          src={heroImage}
+          alt="Shriram Masales Turmeric Powder"
+        />
+      </div>
 
     </section>
   );

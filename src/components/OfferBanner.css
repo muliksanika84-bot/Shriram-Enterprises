@@ -1,469 +1,107 @@
-.offer-banner{
-    position:relative;
-    overflow:hidden;
-    padding:90px 8%;
-    background:linear-gradient(135deg,#ffd54f,#ffb300,#f57c00);
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* =========================
+   MONSOON SALE
+========================= */
+
+.offer-banner {
+    width: 100%;
+
+    /* Space for fixed navbar */
+    padding: 125px 20px 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fffdf7;
+
+    box-sizing: border-box;
 }
 
-.offer-card{
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:900px;
-    text-align:center;
 
-    background:rgba(255,255,255,.18);
-    backdrop-filter:blur(18px);
+/* =========================
+   POSTER
+========================= */
 
-    border:1px solid rgba(255,255,255,.35);
+.offer-card {
+    width: 65%;
+    max-width: 850px;
+    min-width: 450px;
 
-    border-radius:30px;
+    background: white;
 
-    padding:60px 40px;
+    border-radius: 20px;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.18);
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 0 25px rgba(255, 180, 0, 0.20);
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
 }
 
-.offer-badge{
-    display:inline-block;
 
-    background:white;
+/* =========================
+   POSTER IMAGE
+========================= */
 
-    color:#d88d00;
+.offer-card img {
+    width: 100%;
+    height: auto;
 
-    padding:12px 28px;
+    display: block;
 
-    border-radius:50px;
-
-    font-size:15px;
-
-    font-weight:700;
-
-    letter-spacing:1px;
-
-    margin-bottom:25px;
-
-    animation:pulse 1.5s infinite;
+    object-fit: contain;
 }
 
-.offer-card h1{
 
-    font-size:58px;
+/* =========================
+   HOVER EFFECT
+========================= */
 
-    color:#222;
+.offer-card:hover {
+    transform: translateY(-6px);
 
-    margin-bottom:20px;
-
-    animation:floatTitle 3s ease-in-out infinite;
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.20),
+        0 0 35px rgba(255, 180, 0, 0.30);
 }
 
-.offer-card h3{
 
-    font-size:30px;
+/* =========================
+   TABLET
+========================= */
 
-    color:#5d4300;
+@media (max-width: 992px) {
 
-    margin-bottom:25px;
-}
+    .offer-banner {
+        padding-top: 120px;
+    }
 
-.offer-card h3 span{
-
-    color:white;
-
-    background:#d88d00;
-
-    padding:6px 15px;
-
-    border-radius:8px;
-}
-
-.offer-card p{
-
-    font-size:20px;
-
-    color:#333;
-
-    line-height:1.8;
-
-    margin-bottom:45px;
-}
-
-.countdown{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-bottom:45px;
-
-    flex-wrap:wrap;
-}
-
-.countdown div{
-
-    width:130px;
-
-    height:130px;
-
-    background:white;
-
-    border-radius:20px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-    transition:.3s;
-}
-
-.countdown div:hover{
-
-transform:
-translateY(-12px)
-scale(1.08);
-
-box-shadow:
-0 18px 45px rgba(0,0,0,.25),
-0 0 30px rgba(255,255,255,.7);
+    .offer-card {
+        width: 60%;
+        min-width: 350px;
+    }
 
 }
 
-.countdown h2{
 
-    font-size:42px;
+/* =========================
+   MOBILE
+========================= */
 
-    color:#d88d00;
+@media (max-width: 600px) {
 
-    margin-bottom:8px;
-}
+    .offer-banner {
+        padding: 110px 15px 30px;
+    }
 
-.countdown span{
+    .offer-card {
+        width: 90%;
+        min-width: 0;
 
-    color:#555;
-
-    font-weight:600;
-}
-
-.offer-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:#222;
-
-    color:white;
-
-    padding:18px 40px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-size:18px;
-
-    font-weight:700;
-
-    transition:.3s;
-}
-
-.offer-btn:hover{
-
-    transform:translateY(-5px);
-
-    background:#111;
-}
-
-/* Floating circles */
-
-.floating-circle{
-
-    position:absolute;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.18);
-
-    animation:float 7s ease-in-out infinite;
-}
-
-.circle1{
-
-    width:220px;
-
-    height:220px;
-
-    top:-60px;
-
-    left:-70px;
-}
-
-.circle2{
-
-    width:170px;
-
-    height:170px;
-
-    right:6%;
-
-    top:50px;
-
-    animation-delay:1s;
-}
-
-.circle3{
-
-    width:280px;
-
-    height:280px;
-
-    bottom:-100px;
-
-    left:45%;
-
-    animation-delay:2s;
-}
-
-/* Animations */
-
-@keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.08);
-}
-
-100%{
-transform:scale(1);
-}
-
-}
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-25px);
-}
-
-}
-
-@keyframes floatTitle{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-8px);
-}
-
-}
-
-/* Responsive */
-
-@media(max-width:768px){
-
-.offer-banner{
-
-padding:60px 5%;
-
-}
-
-.offer-card{
-
-padding:40px 25px;
-
-}
-
-.offer-card h1{
-
-font-size:38px;
-
-}
-
-.offer-card h1{
-    font-size:58px;
-    font-weight:800;
-    margin-bottom:20px;
-    text-transform:uppercase;
-
-    background:linear-gradient(
-        90deg,
-        #ffffff,
-        #fff6c2,
-        #ffffff
-    );
-
-    background-size:300%;
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    animation:shine 5s linear infinite,
-              floatTitle 3s ease-in-out infinite;
-}
-
-.offer-card p{
-
-font-size:16px;
-
-}
-
-.countdown{
-
-gap:15px;
-
-}
-
-.countdown div{
-
-width:130px;
-height:130px;
-
-background:rgba(255,255,255,.95);
-
-backdrop-filter:blur(10px);
-
-border-radius:22px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-box-shadow:
-0 12px 35px rgba(0,0,0,.18),
-0 0 20px rgba(255,255,255,.5);
-
-border:2px solid rgba(255,255,255,.4);
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.countdown h2{
-
-font-size:30px;
-
-}
-
-.offer-btn{
-
-padding:15px 28px;
-
-font-size:16px;
-
-}
-
-}
-.offer-badge.live{
-    background:#28a745;
-    color:white;
-    animation:pulse 1s infinite;
-}
-@keyframes shine{
-
-0%{
-background-position:-300%;
-}
-
-100%{
-background-position:300%;
-}
-
-}
-.gift{
-
-position:absolute;
-
-font-size:34px;
-
-animation:floatGift 6s ease-in-out infinite;
-
-opacity:.85;
-
-z-index:1;
-
-}
-
-.gift1{
-
-left:8%;
-
-top:18%;
-
-}
-
-.gift2{
-
-right:10%;
-
-top:20%;
-
-animation-delay:1s;
-
-}
-
-.gift3{
-
-left:18%;
-
-bottom:18%;
-
-animation-delay:2s;
-
-}
-
-.gift4{
-
-right:18%;
-
-bottom:15%;
-
-animation-delay:3s;
-
-}
-
-@keyframes floatGift{
-
-0%,100%{
-
-transform:
-translateY(0)
-rotate(0deg);
-
-}
-
-50%{
-
-transform:
-translateY(-18px)
-rotate(12deg);
-
-}
+        border-radius: 12px;
+    }
 
 }

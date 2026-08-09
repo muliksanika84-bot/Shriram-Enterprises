@@ -4,48 +4,66 @@ import logo from "../assets/logo/logo.jpeg";
 import {
   FaPhoneAlt,
   FaWhatsapp,
-  FaShoppingCart,
 } from "react-icons/fa";
 
-import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
-
 function Navbar() {
-  const { totalItems } = useCart();
-
   return (
     <header className="navbar">
+
+      {/* =========================
+          LOGO
+      ========================= */}
+
       <div className="navbar-logo">
-        <img src={logo} alt="Shriram Masales Logo" />
+
+        <img
+          src={logo}
+          alt="Shriram Masales Logo"
+        />
 
         <div className="logo-text">
           <h2>Shriram Masales</h2>
           <span>Pure • Natural • Premium</span>
         </div>
+
       </div>
 
+
+      {/* =========================
+          MENU
+      ========================= */}
+
       <nav className="navbar-links">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#products">
+          Products
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
       </nav>
+
+
+      {/* =========================
+          RIGHT SIDE
+      ========================= */}
 
       <div className="navbar-right">
 
-        {/* Cart */}
-
-        <Link to="/cart" className="cart-icon">
-          <FaShoppingCart />
-
-          {totalItems > 0 && (
-            <span className="cart-count">
-              {totalItems}
-            </span>
-          )}
-        </Link>
+        {/* Phone Numbers */}
 
         <div className="phone-box">
+
           <a href="tel:+919890070845">
             <FaPhoneAlt />
             9890070845
@@ -55,7 +73,11 @@ function Navbar() {
             <FaPhoneAlt />
             8308288352
           </a>
+
         </div>
+
+
+        {/* WhatsApp */}
 
         <a
           href="https://wa.me/919890070845"
@@ -66,7 +88,9 @@ function Navbar() {
           <FaWhatsapp />
           WhatsApp
         </a>
+
       </div>
+
     </header>
   );
 }

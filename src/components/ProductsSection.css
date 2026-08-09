@@ -209,3 +209,32 @@ padding:14px;
 .add-cart-btn:hover {
   background: #e68900;
 }
+.products-offer {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #e53935;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    box-shadow: 0 5px 15px rgba(229, 57, 53, 0.25);
+}
+
+.offer-description {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+.offer-tag {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
