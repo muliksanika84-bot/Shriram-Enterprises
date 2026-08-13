@@ -1,0 +1,175 @@
+.delivery-section {
+  padding: 70px 20px;
+  background-color: #fffaf0;
+  text-align: center;
+}
+
+.delivery-section .section-title {
+  margin-bottom: 35px;
+}
+
+.delivery-section .section-title span {
+  display: block;
+  color: #d89b00;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.delivery-section .section-title h2 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: #333;
+}
+
+.delivery-section .section-title p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* Main Box */
+
+.delivery-box {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Select and Quantity */
+
+.delivery-box select,
+.delivery-box input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background-color: #fff;
+  color: #333;
+
+  font-size: 16px;
+  outline: none;
+}
+
+/* Focus */
+
+.delivery-box select:focus,
+.delivery-box input:focus {
+  border-color: #d89b00;
+}
+
+/* Calculate Button */
+
+.delivery-box button {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #d89b00;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delivery-box button:hover {
+  background-color: #b77f00;
+  transform: translateY(-2px);
+}
+
+/* Result */
+
+.delivery-result {
+  margin-top: 25px;
+  padding: 22px;
+
+  background-color: #fff8df;
+  border-radius: 10px;
+
+  text-align: left;
+}
+
+.delivery-result h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+
+  color: #333;
+  font-size: 21px;
+}
+
+.delivery-result p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.delivery-result strong {
+  color: #333;
+}
+
+.delivery-result hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 18px 0;
+}
+
+.delivery-result h3:last-child {
+  color: #d89b00;
+  margin-bottom: 0;
+}
+
+/* Bulk Contact Link */
+
+.delivery-result a {
+  display: inline-block;
+  margin-top: 12px;
+
+  color: #d89b00;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.delivery-result a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .delivery-section {
+    padding: 50px 15px;
+  }
+
+  .delivery-section .section-title h2 {
+    font-size: 27px;
+  }
+
+  .delivery-box {
+    padding: 22px;
+  }
+
+  .delivery-box select,
+  .delivery-box input,
+  .delivery-box button {
+    font-size: 15px;
+  }
+
+  .delivery-result {
+    padding: 18px;
+  }
+}

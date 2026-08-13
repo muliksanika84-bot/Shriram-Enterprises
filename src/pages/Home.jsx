@@ -1,3 +1,4 @@
+import DeliveryCharge from "../components/DeliveryCharge";
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
 import WhyChoose from "../components/WhyChoose";
@@ -21,6 +22,8 @@ function Home() {
       <WhyChoose />
 
       <ProductsSection />
+
+      <DeliveryCharge />
 
       <AboutSection />
 
