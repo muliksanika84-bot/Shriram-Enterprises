@@ -18,23 +18,11 @@ function ProductsSection() {
         for rich colour, aroma and authentic taste.
       </p>
 
-      <div className="products-offer">
-        🎁 BUY 3 GET 2 FREE 🎁
-      </div>
-
-      <p className="offer-description">
-        Buy any 3 packs and get 2 packs absolutely FREE!
-      </p>
-
       <div className="products-grid">
 
         {/* 50G */}
 
         <div className="product-card">
-
-          <div className="offer-tag">
-            🎁 BUY 3 GET 2 FREE
-          </div>
 
           <div className="product-badge">
             Best Seller
@@ -70,9 +58,7 @@ function ProductsSection() {
 
         <div className="product-card">
 
-          <div className="offer-tag">
-            🎁 BUY 3 GET 2 FREE
-          </div>
+         
 
           <div className="product-badge">
             Best Seller
