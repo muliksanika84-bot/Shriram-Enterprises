@@ -62,11 +62,11 @@ function DeliveryCharge() {
           <option value="">Select Product</option>
 
           <option value="50g">
-            Turmeric Powder - 50g (₹35)
+            Turmeric Powder - 50g (₹37)
           </option>
 
           <option value="100g">
-            Turmeric Powder - 100g (₹55)
+            Turmeric Powder - 100g (₹75)
           </option>
         </select>
 
