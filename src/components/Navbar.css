@@ -2,187 +2,350 @@
    NAVBAR
 ========================= */
 
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#ffffff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:12px 7%;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-    z-index:1000;
-    box-sizing:border-box;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: #ffffff;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 7%;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  z-index: 1000;
+
+  box-sizing: border-box;
 }
+
 
 /* =========================
    LOGO
 ========================= */
 
-.navbar-logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.navbar-logo img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    object-fit:cover;
+.navbar-logo img {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.logo-text h2{
-    margin:0;
-    color:black;
-    font-size:24px;
+.logo-text h2 {
+  margin: 0;
+
+  color: #000000;
+
+  font-size: 24px;
 }
 
-.logo-text span{
-    font-size:13px;
-    color:#666;
+.logo-text span {
+  font-size: 13px;
+  color: #666666;
 }
+
 
 /* =========================
    MENU
 ========================= */
 
-.navbar-links{
-    display:flex;
-    align-items:center;
-    gap:35px;
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
 }
 
-.navbar-links a{
-    text-decoration:none;
-    color:#333;
-    font-size:17px;
-    font-weight:600;
-    transition:.3s;
+.navbar-links a {
+  text-decoration: none;
+
+  color: #333333;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.3s;
 }
 
-.navbar-links a:hover{
-    color:#ff9800;
+.navbar-links a:hover {
+  color: #ff9800;
 }
+
 
 /* =========================
    RIGHT SIDE
 ========================= */
 
-.navbar-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
+.navbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
 }
 
-/* =========================
-   CART
-========================= */
-
-.cart-icon{
-    position:relative;
-    color:#333;
-    font-size:28px;
-    text-decoration:none;
-    transition:.3s;
-}
-
-.cart-icon:hover{
-    color:#ff9800;
-}
-
-.cart-count{
-    position:absolute;
-    top:-10px;
-    right:-10px;
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background:red;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:11px;
-    font-weight:bold;
-}
 
 /* =========================
    PHONE
 ========================= */
 
-.phone-box{
-    display:flex;
-    flex-direction:column;
-    gap:6px;
+.phone-box {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
 }
 
-.phone-box a{
-    text-decoration:none;
-    color:#333;
-    font-size:14px;
-    display:flex;
-    align-items:center;
-    gap:8px;
+.phone-box a {
+  text-decoration: none;
+
+  color: #333333;
+
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
 }
 
-.phone-box a:hover{
-    color:#ff9800;
+.phone-box a:hover {
+  color: #ff9800;
 }
+
 
 /* =========================
    WHATSAPP BUTTON
 ========================= */
 
-.whatsapp-btn{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  background: #25d366;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
 }
 
-.whatsapp-btn:hover{
-    background:#1ebc59;
-    transform:translateY(-2px);
+.whatsapp-btn:hover {
+  background: #1ebc59;
+
+  transform: translateY(-2px);
 }
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 10px 4%;
+  }
+
+  .navbar-links {
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 15px;
+  }
+
+  .navbar-right {
+    gap: 12px;
+  }
+
+  .phone-box a {
+    font-size: 12px;
+  }
+
+  .whatsapp-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:992px){
+@media (max-width: 768px) {
 
-.navbar{
-    flex-direction:column;
-    gap:15px;
-    padding:15px;
+  .navbar {
+    position: fixed;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    padding: 9px 12px;
+
+    align-items: center;
+  }
+
+
+  /* LOGO */
+
+  .navbar-logo {
+    gap: 8px;
+
+    justify-content: center;
+  }
+
+  .navbar-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logo-text {
+    text-align: left;
+  }
+
+  .logo-text h2 {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .logo-text span {
+    font-size: 11px;
+  }
+
+
+  /* MENU */
+
+  .navbar-links {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .navbar-links a {
+    font-size: 15px;
+  }
+
+
+  /* RIGHT SIDE */
+
+  .navbar-right {
+    width: 100%;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+  }
+
+
+  /* PHONE NUMBERS */
+
+  .phone-box {
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .phone-box a {
+    font-size: 12px;
+
+    gap: 5px;
+  }
+
+
+  /* WHATSAPP */
+
+  .whatsapp-btn {
+    padding: 9px 15px;
+
+    font-size: 13px;
+
+    gap: 6px;
+  }
 }
 
-.navbar-links{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
 
-.navbar-right{
-    flex-direction:column;
-    gap:15px;
-}
+/* =========================
+   SMALL MOBILE
+========================= */
 
-.phone-box{
-    align-items:center;
-}
+@media (max-width: 480px) {
 
-.logo-text{
-    text-align:center;
-}
+  .navbar {
+    gap: 7px;
 
+    padding: 8px 10px;
+  }
+
+
+  .navbar-logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-text h2 {
+    font-size: 18px;
+  }
+
+  .logo-text span {
+    font-size: 10px;
+  }
+
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+
+  .navbar-right {
+    gap: 8px;
+  }
+
+  .phone-box {
+    gap: 8px;
+  }
+
+  .phone-box a {
+    font-size: 11px;
+  }
+
+  .whatsapp-btn {
+    padding: 8px 12px;
+
+    font-size: 12px;
+  }
 }

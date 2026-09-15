@@ -37,7 +37,7 @@ function ProductsSection() {
 
           <p>50 Gram Pack</p>
 
-          <h4>₹35</h4>
+          <h4>₹37</h4>
 
           <span className="stock">
             ✔ In Stock
@@ -73,7 +73,7 @@ function ProductsSection() {
 
           <p>100 Gram Pack</p>
 
-          <h4>₹55</h4>
+          <h4>₹75</h4>
 
           <span className="stock">
             ✔ In Stock
